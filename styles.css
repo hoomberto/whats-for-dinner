@@ -32,11 +32,21 @@ body {
 
 nav {
   background-color: #0fb9b1;
-  position: sticky;
-  top: 0;
   display: flex;
-  flex-wrap: wrap;
+  top: 0;
   justify-content: space-between;
   height: 3.5em;
-  width: 100%;
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+section {
+  margin-top: 3%;
+  width: 400px;
+  height: 22em;
+  background-color: rgba(255, 255, 255, 0.85);
 }
