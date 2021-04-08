@@ -23,3 +23,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.cookpot-image {
+  max-width: 140px;
+  opacity: 100;
+}
