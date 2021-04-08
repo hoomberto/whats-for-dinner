@@ -8,9 +8,9 @@ red - #ee5253
 
 */
 
-*{
+/* *{
   border: 2px solid blue;
-}
+} */
 
 html {
   font-family: 'Roboto', sans-serif;
@@ -149,6 +149,8 @@ h4 {
   width: 70px;
   margin-right: 3vw;
   cursor: pointer;
+  border: 0;
+  outline: 0;
 }
 
 .clear-button:hover {
