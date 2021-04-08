@@ -53,6 +53,13 @@ section {
   background-color: rgba(225, 225, 225, .9);
 }
 
+#dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 769px) {
     main {
         flex-direction: column;
@@ -81,6 +88,18 @@ h2 {
   margin-left: 1vw;
 }
 
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: -5vh;
+}
+
+h4 {
+  text-align: center;
+  font-style: italic;
+  padding: 0 10px;
+}
+
 .cook-button {
   background-color: #0fb9b1;
   border-radius: 10px;
@@ -106,10 +125,4 @@ h2 {
 
 ul > input {
   margin-bottom: 5%;
-}
-
-#dishes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
