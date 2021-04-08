@@ -83,3 +83,9 @@ section h3::after {
   width: 190px;
   cursor: pointer;
 }
+
+#dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
