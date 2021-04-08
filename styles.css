@@ -35,6 +35,7 @@ nav {
   display: flex;
   top: 0;
   justify-content: space-between;
+  align-items: center;
   height: 3.5em;
   width: 100vw;
 }
@@ -48,7 +49,7 @@ section {
   margin-top: 3%;
   width: 400px;
   height: 22em;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(225, 225, 225, .9);
 }
 
 @media screen and (max-width: 769px) {
@@ -66,8 +67,12 @@ section h3 {
 
 section h3::after {
     content: "*";
-    color: red;
+    color: #ee5253;
     vertical-align: super;
+}
+
+h2 {
+  margin-left: 1vw;
 }
 
 .cook-button {
@@ -82,6 +87,19 @@ section h3::after {
   opacity: 100;
   width: 190px;
   cursor: pointer;
+}
+
+.recipe-button {
+  text-transform: uppercase;
+  margin-right: 2vw;
+  height: 55%;
+  border: 0;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+ul > input {
+  margin-bottom: 5%;
 }
 
 #dishes {
