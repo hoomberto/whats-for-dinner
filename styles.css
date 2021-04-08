@@ -69,3 +69,17 @@ section h3::after {
     color: red;
     vertical-align: super;
 }
+
+.cook-button {
+  background-color: #0fb9b1;
+  border-radius: 10px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 200;
+  padding: 10px 3px;
+  margin-left: 8%;
+  border: 0;
+  opacity: 100;
+  width: 190px;
+  cursor: pointer;
+}
