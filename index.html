@@ -5,12 +5,12 @@
   </head>
   <body>
     <nav>
-      <h2>What's for Dinner?</h2>
-      <button>Add a Recipe</button>
+      <h2 class="nav-header">What's for Dinner?</h2>
+      <button class="recipe-button">Add a Recipe</button>
     </nav>
     <main>
-      <section>
-        <h3>What are you looking for?</h3>
+      <section id="selectionBox" class="recipe-box">
+        <h3 required="required">What are you looking for?</h3>
         <ul>
           <input type="radio" id="side" name="choice" value="sides">
           <label for="side">Side</label><br>
@@ -21,9 +21,9 @@
           <input type="radio" id="entireMeal" name="choice" value="full">
           <label for="side">Entire Meal</label><br>
         </ul>
-        <button>Let's Cook!</button>
+        <button class="cook-button">Let's Cook!</button>
       </section>
-      <section>
+      <section id="dishes" class="recipe-box">
           <img class="cookpot-image" src="assets/cookpot.svg" alt="cookpot icon">
       </section>
     </main>
