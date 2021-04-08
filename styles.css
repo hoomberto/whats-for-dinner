@@ -116,6 +116,12 @@ h4 {
   opacity: 100;
   width: 190px;
   cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.cook-button:hover {
+  transform: scale(1.1)
+
 }
 
 .recipe-button {
@@ -152,6 +158,7 @@ h4 {
   cursor: pointer;
   border: 0;
   outline: 0;
+  transition: all .2s ease-in-out;
 }
 
 @media screen and (max-width: 769px) {
@@ -162,6 +169,7 @@ h4 {
 
 .clear-button:hover {
   background-color: #6d8082;
+  transform: scale(1.1);
 }
 
 ul > input {
