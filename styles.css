@@ -22,9 +22,21 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  margin: 0;
 }
 
 .cookpot-image {
   max-width: 140px;
   opacity: 100;
+}
+
+nav {
+  background-color: #0fb9b1;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 3.5em;
+  width: 100%;
 }
