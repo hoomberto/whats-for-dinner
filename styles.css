@@ -8,3 +8,18 @@ red - #ee5253
 
 */
 
+/* *{
+  border: 2px solid blue;
+} */
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: url(assets/burger-friends.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
