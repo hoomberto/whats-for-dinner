@@ -26,8 +26,10 @@ body {
 }
 
 .cookpot-image {
+  position: relative;
   max-width: 140px;
   opacity: 100;
+  z-index: 0;
 }
 
 nav {
@@ -46,6 +48,7 @@ main {
 }
 
 section {
+  position: relative;
   margin-top: 6vh;
   margin-bottom: 1vh;
   width: 400px;
@@ -53,7 +56,14 @@ section {
   background-color: rgba(225, 225, 225, .9);
 }
 
-@media screen and (max-width: 769px) {
+#dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 840px) {
     main {
         flex-direction: column;
         align-items: center;
@@ -81,6 +91,19 @@ h2 {
   margin-left: 1vw;
 }
 
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: -5vh;
+}
+
+h4 {
+  text-align: center;
+  font-style: italic;
+  padding: 0 10px;
+  margin-top: 15vh;
+}
+
 .cook-button {
   background-color: #0fb9b1;
   border-radius: 10px;
@@ -104,12 +127,43 @@ h2 {
   padding: 8px;
 }
 
-ul > input {
-  margin-bottom: 5%;
+.hidden {
+  display: none;
 }
 
-#dishes {
+.button-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  height: 4vh;
+  width: 400px;
+  justify-content: flex-end;
+  margin-top: 5vh;
+}
+
+.clear-button {
+  position: absolute;
+  padding: 10px;
+  color: white;
+  background-color: #95a5a6;
+  text-transform: uppercase;
+  border-radius: 4px;
+  width: 70px;
+  margin-right: 2vw;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .clear-button {
+      margin-right: 3vw;
+    }
+}
+
+.clear-button:hover {
+  background-color: #6d8082;
+}
+
+ul > input {
+  margin-bottom: 5%;
 }

@@ -1,6 +1,8 @@
 // DOM Elements
 var btn = document.querySelector(".cook-button");
 var recipeSection = document.querySelector("#dishes");
+var clearBtnContainer = document.querySelector(".button-container")
+var potImg = document.querySelector(".cookpot-image")
 //Event Listeners
 btn.addEventListener("click", dinnerSelection);
 //Functions
@@ -9,7 +11,9 @@ function randomIndex(array) {
 }
 
 function getRandomDish(rbv) {
-  recipeSection.innerHTML = `<h4>You should make</h4>`;
+  recipeSection.innerHTML = "";
+  recipeSection.innerHTML += `<h4>You should make</h4>`;
+  recipeSection.innerHTML += `<br>`;
   if (rbv === "sides") {
     recipeSection.innerHTML += `
     <h1>${sides[randomIndex(sides)]}!</h1>
@@ -30,6 +34,7 @@ function getRandomDish(rbv) {
     <h1>${mains[randomIndex(mains)]} with a side of ${sides[randomIndex(sides)]} and ${desserts[randomIndex(desserts)]} for dessert!</h1>
     `
   }
+  recipeSection.innerHTML += `<div class="button-container"><button class="clear-button">Clear</button></div>`
 }
 
 function dinnerSelection() {
