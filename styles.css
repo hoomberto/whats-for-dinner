@@ -128,7 +128,7 @@ h4 {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .button-container {
