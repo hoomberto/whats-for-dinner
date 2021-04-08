@@ -63,7 +63,7 @@ section {
   flex-direction: column;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 840px) {
     main {
         flex-direction: column;
         align-items: center;
@@ -93,7 +93,7 @@ h2 {
 
 h1 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 24px;
   margin-top: -5vh;
 }
 
@@ -137,20 +137,27 @@ h4 {
   height: 4vh;
   width: 400px;
   justify-content: flex-end;
-  margin-top: 10vh;
+  margin-top: 5vh;
 }
 
 .clear-button {
-  position: relative;
+  position: absolute;
+  padding: 10px;
   color: white;
   background-color: #95a5a6;
   text-transform: uppercase;
   border-radius: 4px;
   width: 70px;
-  margin-right: 3vw;
+  margin-right: 2vw;
   cursor: pointer;
   border: 0;
   outline: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .clear-button {
+      margin-right: 3vw;
+    }
 }
 
 .clear-button:hover {
