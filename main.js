@@ -10,6 +10,7 @@ function randomIndex(array) {
 
 function getRandomDish(rbv) {
   recipeSection.innerHTML = `<h4>You should make</h4>`;
+  recipeSection.innerHTML += `<br>`;
   if (rbv === "sides") {
     recipeSection.innerHTML += `
     <h1>${sides[randomIndex(sides)]}!</h1>
