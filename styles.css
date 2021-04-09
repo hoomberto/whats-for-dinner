@@ -93,8 +93,10 @@ h2 {
 
 h1 {
   text-align: center;
-  font-size: 24px;
-  margin-top: -5vh;
+  font-size: 26px;
+  margin-top: -7vh;
+  padding: 20px;
+  font-weight: 900;
 }
 
 h4 {
@@ -143,7 +145,7 @@ h4 {
   height: 4vh;
   width: 400px;
   justify-content: flex-end;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 .clear-button {
@@ -154,7 +156,8 @@ h4 {
   text-transform: uppercase;
   border-radius: 4px;
   width: 70px;
-  margin-right: 2vw;
+  margin-top: -3vh;
+  margin-right: 3vw;
   cursor: pointer;
   border: 0;
   outline: 0;
@@ -163,7 +166,7 @@ h4 {
 
 @media screen and (max-width: 769px) {
     .clear-button {
-      margin-right: 3vw;
+      margin-right: 5vw;
     }
 }
 
