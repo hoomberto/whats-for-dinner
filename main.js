@@ -97,7 +97,7 @@ function addFavDish() {
     for (let [type, dishes] of userDishes) {
       if (selectedValue === type) {
         if (!dishes.includes(recipeText)) {
-          saved.innerText += `${recipeText}`;
+          saved.innerText += `${recipeText} `;
           dishes.push(recipeText);
           updateUserBase();
           return
@@ -124,16 +124,16 @@ function backFromSaved() {
 
 function setFavoritedRecipes() {
   for (var side of loggedIn.favDishes.sides) {
-    sides.innerText += `${side}, `
+    sides.innerText += `${side} `;
   }
   for (var main of loggedIn.favDishes.mains) {
-    mains.innerText += `${main}, `
+    mains.innerText += `${main} `;
   }
   for (var dessert of loggedIn.favDishes.desserts) {
-    desserts.innerText += `${dessert}, `
+    desserts.innerText += `${dessert} `;
   }
   for (var fulls of loggedIn.favDishes.full) {
-    full.innerText += `${fulls}, `
+    full.innerText += `${fulls} `;
   }
 }
 

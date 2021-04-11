@@ -121,6 +121,10 @@ h1 {
   margin-top: 15vh;
 } */
 
+button {
+    transition: all .2s ease-in-out;
+}
+
 .cook-button {
   background-color: #0fb9b1;
   border-radius: 10px;
@@ -136,23 +140,27 @@ h1 {
   transition: all .2s ease-in-out;
 }
 
-.cook-button:hover {
+.cook-button:hover,
+.recipe-button:hover,
+.go-back:hover {
   transform: scale(1.1)
-
 }
 
 .recipe-button {
   text-transform: uppercase;
   margin-right: 2vw;
-  height: 55%;
+  height: 40px;
   border: 0;
   border-radius: 3px;
   padding: 8px;
+  cursor: pointer;
+  outline: 0;
+
 }
 
 .button-container {
-  display: inline-flex;
-  justify-content: flex-end;
+  display: flex;
+  justify-content: space-between;
   height: 4vh;
   width: 400px;
   margin-top: 3vh;
@@ -171,11 +179,18 @@ h1 {
   margin-right: 240px;
   margin-top: -20px;
   transition: all .2s ease-in-out;
+  margin-left: 3vw;
 }
 
 .btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
+
+.btn:active:hover {
+  -webkit-transform: scale3d(3, 3, 3);
+  transform: scale3d(3);
+}
+
 
 .heart {
   width: 20px;
@@ -190,7 +205,8 @@ h1 {
   text-transform: uppercase;
   border-radius: 4px;
   width: 70px;
-  margin-top: -3vh;
+  height: 40px;
+  margin-top: -1vh;
   margin-right: 3vw;
   cursor: pointer;
   border: 0;
@@ -321,4 +337,5 @@ p.saved {
   margin-right: 3vw;
   margin-bottom: 3vh;
   width: 100px;
+  outline: 0;
 }
