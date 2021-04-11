@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html>
+<title>What's for Dinner?</title>
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
   </head>
   <body>
     <nav class="hidden">
@@ -10,63 +13,62 @@
       <button class="recipe-button">Saved Recipes</button>
     </nav>
     <main>
-  <section id="login" class="login-container">
-    <section class="login-form">
-      <h1 class="splash-text">What's for Dinner?</h1>
-      <form>
-        <h4 class="error1 hidden">Please use a different <br>username.</h4>
-        <label for="username">Username:</label><br>
-        <input class="user-field" type="text" name="login"><br>
-        <label for="password">Password:</label><br>
-        <input class="pass-field" type="password" name="login"><br><br>
-        <input class="login-button" type="submit" value="Log In">
-        <input class="signup-button" type="submit" value="Sign Up">
-      </form>
-    </section>
-  </section>
-  <section id="selectionBox" class="recipe-box hidden">
-    <h3 required="required">What are you looking for?</h3>
-    <ul>
-      <input type="radio" id="side" name="choice" value="sides">
-      <label for="side">Side</label><br>
-      <input type="radio" id="mainDish" name="choice" value="mains">
-      <label for="mainDish">Main Dish</label><br>
-      <input type="radio" id="dessert" name="choice" value="desserts">
-      <label for="dessert">Dessert</label><br>
-      <input type="radio" id="entireMeal" name="choice" value="full">
-      <label for="side">Entire Meal</label><br>
-    </ul>
-    <button class="cook-button">Let's Cook!</button>
-  </section>
-  <section id="dishes" class="hidden">
-      <img class="cookpot-image" src="assets/cookpot.svg" alt="cookpot icon">
-      <img id="heart-button" class="hidden" src="assets/heart.png" alt="heart-icon">
-      <button class="clear-button hidden">Clear</button>
-  </section>
-  <section class="saved-recipes-section hidden">
-    <h2>Saved Recipes</h2>
-    <section>
-      <h4 class="saved">Sides</h4>
-      <p id="sides" class="saved-sides saved" name="sides"></p>
-    </section>
-    <section>
-      <h4 class="saved">Main Dishes</h4>
-      <p id="mains" class="saved-mains saved"></p>
-    </section>
-    <section>
-      <h4 class="saved">Desserts</h4>
-      <p id="desserts" class="saved-desserts saved" name="desserts"></p>
-    </section>
-    <section>
-      <h4 class="saved">Full Meals</h4>
-      <p id="full" class="saved-full saved" name="full"></p>
-    </section>
-    <section class="go-back-container">
-      <button class="go-back" type="submit">Go back</button>
-    </section>
-  </section>
-</main>
-
+      <section id="login" class="login-container">
+        <section class="login-form">
+          <h1 class="splash-text">What's for Dinner?</h1>
+          <form>
+            <h4 class="error1 hidden">Please use a different <br>username.</h4>
+            <label for="username">Username:</label><br>
+            <input class="user-field" type="text" name="login"><br>
+            <label for="password">Password:</label><br>
+            <input class="pass-field" type="password" name="login"><br><br>
+            <input class="login-button" type="submit" value="Log In">
+            <input class="signup-button" type="submit" value="Sign Up">
+          </form>
+        </section>
+      </section>
+      <section id="selectionBox" class="recipe-box hidden">
+        <h3 required="required">What are you looking for?</h3>
+        <ul>
+          <input type="radio" id="side" name="choice" value="sides">
+          <label for="side">Side</label><br>
+          <input type="radio" id="mainDish" name="choice" value="mains">
+          <label for="mainDish">Main Dish</label><br>
+          <input type="radio" id="dessert" name="choice" value="desserts">
+          <label for="dessert">Dessert</label><br>
+          <input type="radio" id="entireMeal" name="choice" value="full">
+          <label for="side">Entire Meal</label><br>
+        </ul>
+        <button class="cook-button">Let's Cook!</button>
+      </section>
+      <section id="dishes" class="hidden">
+          <img class="cookpot-image" src="assets/cookpot.svg" alt="cookpot icon">
+          <img id="heart-button" class="hidden" src="assets/heart.png" alt="heart-icon">
+          <button class="clear-button hidden">Clear</button>
+      </section>
+      <section class="saved-recipes-section hidden">
+        <h2>Saved Recipes</h2>
+        <section>
+          <h4 class="saved">Sides</h4>
+          <p id="sides" class="saved-sides saved" name="sides"></p>
+        </section>
+        <section>
+          <h4 class="saved">Main Dishes</h4>
+          <p id="mains" class="saved-mains saved"></p>
+        </section>
+        <section>
+          <h4 class="saved">Desserts</h4>
+          <p id="desserts" class="saved-desserts saved" name="desserts"></p>
+        </section>
+        <section>
+          <h4 class="saved">Full Meals</h4>
+          <p id="full" class="saved-full saved" name="full"></p>
+        </section>
+        <section class="go-back-container">
+          <button class="go-back" type="submit">Go back</button>
+        </section>
+      </section>
+    </main>
   </body>
   <script type="text/javascript" src="dinner-options.js"></script>
   <script type="text/javascript" src="login.js"></script>
