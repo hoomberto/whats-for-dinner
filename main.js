@@ -1,5 +1,5 @@
 // DOM Elements
-var btn = document.querySelector(".cook-button");
+var cookBtn = document.querySelector(".cook-button");
 var recipeSection = document.querySelector("#dishes");
 var clearBtnContainer = document.querySelector(".button-container")
 var potImg = document.querySelector(".cookpot-image")
@@ -14,9 +14,9 @@ var savedBtn = document.querySelector(".recipe-button");
 let savedDishes = [sides, mains, desserts, full];
 
 //Event Listeners
-btn.addEventListener("click", dinnerSelection);
+cookBtn.addEventListener("click", showRandomDinner);
 savedBtn.addEventListener("click", showSavedRecipes);
-goBackBtn.addEventListener("click", backFromSaved);
+goBackBtn.addEventListener("click", goBackFromSaved);
 
 // GLOBAL Variable
 var loggedIn;
@@ -54,19 +54,9 @@ function getRandomDish(rbv) {
   recipeSection.innerHTML += `<div class="button-container"><button class="btn"><img class="heart" src="assets/heart.png" alt="heart-icon"></button><button class="clear-button">Clear</button></div>`
   var clearBtn = document.querySelector(".clear-button");
   var heartBtn = document.querySelector(".btn");
-  clearBtn.addEventListener("click", clear);
+  clearBtn.addEventListener("click", clearRecipeBox);
   heartBtn.addEventListener("click", addFavDish);
 }
-
-// function radioValue() {
-//   var selectedValue;
-//   for (var radioButton of radioButtonSelection) {
-//     if (radioButton.checked) {
-//       selectedValue = radioButton.value;
-//       break;
-//     }
-//   }
-// }
 
 function updateUserBase() {
   deserializedUserBase = JSON.parse(localStorage.getItem("userBase"));
@@ -117,7 +107,7 @@ function showSavedRecipes() {
   savedRecipesSection.classList.remove("hidden");
 }
 
-function backFromSaved() {
+function goBackFromSaved() {
   showMainPage();
   savedRecipesSection.classList.add("hidden");
 }
@@ -137,7 +127,7 @@ function setFavoritedRecipes() {
   }
 }
 
-function dinnerSelection() {
+function showRandomDinner() {
   var selectedValue;
   for (var radioButton of radioButtonSelection) {
     if (radioButton.checked) {
@@ -153,7 +143,7 @@ function dinnerSelection() {
   }
 }
 
-function clear() {
+function clearRecipeBox() {
   recipeSection.innerHTML = "";
   recipeSection.innerHTML += `<img class="cookpot-image" src="assets/cookpot.svg" alt="cookpot icon">`;
   for (var rb of radioButtonSelection) {

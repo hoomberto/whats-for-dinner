@@ -1,22 +1,8 @@
-/* font-family: 'Roboto', sans-serif;
-
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
-
-*/
-
-/* *{
-  border: 2px solid blue;
-} */
-
 html {
   font-family: 'Roboto', sans-serif;
-    position: relative;
-    min-height: 100%;
-    min-width: 460px;
+  position: relative;
+  min-height: 100%;
+  min-width: 460px;
 }
 
 body {
@@ -64,13 +50,6 @@ main {
   background-color: rgba(225, 225, 225, .9);
 }
 
-/* #dishes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-} */
-
 .dishes-box {
   display: flex;
   justify-content: center;
@@ -97,32 +76,25 @@ section h3 {
 }
 
 section h3::after {
-    content: "*";
-    color: #ee5253;
-    vertical-align: super;
+  content: "*";
+  color: #ee5253;
+  vertical-align: super;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(16px, 4vw, 22px);
+  margin-top: -7vh;
+  padding: 20px;
+  font-weight: 900;
 }
 
 h2 {
   margin-left: 1vw;
 }
 
-h1 {
-  text-align: center;
-  font-size: 26px;
-  margin-top: -7vh;
-  padding: 20px;
-  font-weight: 900;
-}
-
-/* h4 {
-  text-align: center;
-  font-style: italic;
-  padding: 0 10px;
-  margin-top: 15vh;
-} */
-
 button {
-    transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .cook-button {
@@ -155,7 +127,6 @@ button {
   padding: 8px;
   cursor: pointer;
   outline: 0;
-
 }
 
 .button-container {
@@ -191,12 +162,9 @@ button {
   transform: scale3d(3);
 }
 
-
 .heart {
   width: 20px;
 }
-
-
 
 .clear-button {
   padding: 10px;
@@ -246,12 +214,10 @@ ul > input {
 .splash-text {
   margin: 20px 0;
   padding: 0;
-
 }
 
 label {
   text-align: center;
-  /* text-transform: uppercase; */
   font-size: 14px;
 }
 
