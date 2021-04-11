@@ -22,6 +22,12 @@ class User {
   constructor(username, password) {
     this.username = username;
     this.password = password;
+    this.favDishes = {
+      sides: [],
+      main: [],
+      dessert: [],
+      full: [],
+    }
   }
 }
 
@@ -78,7 +84,7 @@ function logIn(event) {
   for (var user of deserializedUserBase) {
     if (user.username === userField.value && user.password === passField.value) {
       alert(`Welcome, ${user.username}!`);
-      console.log("works so far");
+      loggedIn = user;
       loginContainer.classList.add("hidden");
       loginContainer.classList.remove("login-container");
       loginForm.classList.add("hidden");

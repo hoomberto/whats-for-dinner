@@ -4,8 +4,13 @@ var recipeSection = document.querySelector("#dishes");
 var clearBtnContainer = document.querySelector(".button-container")
 var potImg = document.querySelector(".cookpot-image")
 var radioButtonSelection = document.querySelectorAll('input[name="choice"]');
+
 //Event Listeners
 btn.addEventListener("click", dinnerSelection);
+
+// GLOBAL Variable
+var loggedIn;
+
 //Functions
 function randomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -35,9 +40,11 @@ function getRandomDish(rbv) {
     <h1>${mains[randomIndex(mains)]} with a side of ${sides[randomIndex(sides)]} and ${desserts[randomIndex(desserts)]} for dessert!</h1>
     `
   }
-  recipeSection.innerHTML += `<div class="button-container"><button class="clear-button">Clear</button></div>`
-  clearBtn = document.querySelector(".clear-button");
+  recipeSection.innerHTML += `<div class="button-container"><button class="btn"><img class="heart" src="assets/heart.png" alt="heart-icon"></button><button class="clear-button">Clear</button></div>`
+  var clearBtn = document.querySelector(".clear-button");
+  var heartBtn = document.querySelector(".btn");
   clearBtn.addEventListener("click", clear);
+  // heartBtn.addEventListener("click", addFavDish)
 }
 
 function dinnerSelection() {
