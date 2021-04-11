@@ -11,6 +11,8 @@ Turing 2103 FE Week 3 Solo Challenge
 ## Introduction
 This is an interactive website that utilizes localStorage so that a user can create an account, login with account, view random dishes based on a selection, favorite the randomly displayed dish, and view the favorited dishes. Users will have their favorite dishes stored to localStorage and retrieved upon login.
 
+Calling resetLocalStorage(); in the dev console will quickly reset the userBase to when initially visited. 
+
 ## Links  
 - To view the project in action, [click here!](https://hoomberto.github.io/whats-for-dinner/)
 
@@ -38,6 +40,7 @@ Site will remember a user's favorite recipes upon leaving site and logging back 
 - Create "Add recipe" button that lets users add their own recipes
 - Refactoring lots of code
 - Create functionality to delete a saved recipe by double clicking it
+- Further inspect bug where github deploys a previous version of the project, causing a user's favDishes.mains property to show up as "favDishes.main". This in turn screws up how it's called and stops the saved recipes functionality from working correctly. 
 
 
 ## Languages
