@@ -17,35 +17,80 @@ function randomIndex(array) {
 }
 
 function getRandomDish(rbv) {
+  // var dinnerType = rbv;
   recipeSection.innerHTML = "";
   recipeSection.innerHTML += `<h4>You should make</h4>`;
   recipeSection.innerHTML += `<br>`;
   if (rbv === "sides") {
     recipeSection.innerHTML += `
-    <h1>${sides[randomIndex(sides)]}!</h1>
+    <h1 class="recipe-text">${sides[randomIndex(sides)]}</h1>
     `;
   }
   else if (rbv === "mains") {
     recipeSection.innerHTML += `
-    <h1>${mains[randomIndex(mains)]}!</h1>
+    <h1 class="recipe-text">${mains[randomIndex(mains)]}</h1>
     `;
   }
   else if (rbv === "desserts") {
     recipeSection.innerHTML += `
-    <h1>${desserts[randomIndex(desserts)]}!</h1>
+    <h1 class="recipe-text">${desserts[randomIndex(desserts)]}</h1>
     `;
   }
   else if (rbv === "full") {
     recipeSection.innerHTML += `
-    <h1>${mains[randomIndex(mains)]} with a side of ${sides[randomIndex(sides)]} and ${desserts[randomIndex(desserts)]} for dessert!</h1>
+    <h1 class="recipe-text">${mains[randomIndex(mains)]} with a side of ${sides[randomIndex(sides)]} and ${desserts[randomIndex(desserts)]} for dessert</h1>
     `
   }
   recipeSection.innerHTML += `<div class="button-container"><button class="btn"><img class="heart" src="assets/heart.png" alt="heart-icon"></button><button class="clear-button">Clear</button></div>`
   var clearBtn = document.querySelector(".clear-button");
   var heartBtn = document.querySelector(".btn");
   clearBtn.addEventListener("click", clear);
-  // heartBtn.addEventListener("click", addFavDish)
+  heartBtn.addEventListener("click", addFavDish);
 }
+
+// function radioValue() {
+//   var selectedValue;
+//   for (var radioButton of radioButtonSelection) {
+//     if (radioButton.checked) {
+//       selectedValue = radioButton.value;
+//       break;
+//     }
+//   }
+// }
+
+function updateUserBase() {
+  deserializedUserBase = JSON.parse(localStorage.getItem("userBase"));
+  for (var user of deserializedUserBase) {
+    if (loggedIn.username === user.username) {
+      user.favDishes = loggedIn.favDishes;
+      localStorage.setItem("userBase", JSON.stringify(deserializedUserBase));
+    }
+  }
+}
+
+function addFavDish() {
+  var recipe = document.querySelector(".recipe-text");
+  userDishes = Object.entries(loggedIn.favDishes);
+  var selectedValue;
+  var recipeText = recipe.innerText;
+    for (var rb of radioButtonSelection) {
+      if (rb.checked) {
+        selectedValue = rb.value;
+      }
+    for (let [type, dishes] of userDishes) {
+      if (selectedValue === type) {
+        if (!dishes.includes(recipeText)) {
+          dishes.push(recipeText);
+          updateUserBase();
+          return
+        }
+      }
+    }
+  }
+}
+
+
+
 
 function dinnerSelection() {
   var selectedValue;
