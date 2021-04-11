@@ -29,26 +29,26 @@ function randomIndex(array) {
 function getRandomDish(rbv) {
   // var dinnerType = rbv;
   recipeSection.innerHTML = "";
-  recipeSection.innerHTML += `<h4>You should make</h4>`;
+  recipeSection.innerHTML += `<h4 class="should-make-txt">You should make</h4>`;
   recipeSection.innerHTML += `<br>`;
   if (rbv === "sides") {
     recipeSection.innerHTML += `
-    <h1 class="recipe-text">${sides[randomIndex(sides)]}</h1>
+    <h1 class="recipe-text">${sideDishes[randomIndex(sideDishes)]}</h1>
     `;
   }
   else if (rbv === "mains") {
     recipeSection.innerHTML += `
-    <h1 class="recipe-text">${mains[randomIndex(mains)]}</h1>
+    <h1 class="recipe-text">${mainDishes[randomIndex(mainDishes)]}</h1>
     `;
   }
   else if (rbv === "desserts") {
     recipeSection.innerHTML += `
-    <h1 class="recipe-text">${desserts[randomIndex(desserts)]}</h1>
+    <h1 class="recipe-text">${dessertDishes[randomIndex(dessertDishes)]}</h1>
     `;
   }
   else if (rbv === "full") {
     recipeSection.innerHTML += `
-    <h1 class="recipe-text">${mains[randomIndex(mains)]} with a side of ${sides[randomIndex(sides)]} and ${desserts[randomIndex(desserts)]} for dessert</h1>
+    <h1 class="recipe-text">${mainDishes[randomIndex(mainDishes)]} with a side of ${sideDishes[randomIndex(sideDishes)]} and ${dessertDishes[randomIndex(dessertDishes)]} for dessert</h1>
     `
   }
   recipeSection.innerHTML += `<div class="button-container"><button class="btn"><img class="heart" src="assets/heart.png" alt="heart-icon"></button><button class="clear-button">Clear</button></div>`
@@ -106,36 +106,36 @@ function addFavDish() {
     }
   }
 
-  function setFavoritedRecipes() {
-  for (var side of loggedIn.favDishes.sides) {
-    sides.innerText += `
-    ${side}
-    `
-  }
-  for (var main of loggedIn.favDishes.mains) {
-    mains.innerText += `
-    ${main}
-    `
-  }
-  for (var dessert of loggedIn.favDishes.desserts) {
-    desserts.innerText += `
-    ${dessert}
-    `
-  }
-  for (var fulls of loggedIn.favDishes.full) {
-    full.innerText += `
-    ${fulls}
-    `
-  }
+function showAddRecipeSelector() {
+  footer.classList.remove("hidden");
 }
 
-  function showSavedRecipes() {
-    recipeSelectionBox.classList.add("hidden");
-    dishesBox.classList.add("hidden");
-    dishesBox.classList.remove("dishes-box");
-    savedRecipesSection.classList.remove("hidden");
-  }
+function showSavedRecipes() {
+  recipeSelectionBox.classList.add("hidden");
+  dishesBox.classList.add("hidden");
+  dishesBox.classList.remove("dishes-box");
+  savedRecipesSection.classList.remove("hidden");
+}
 
+function backFromSaved() {
+  showMainPage();
+  savedRecipesSection.classList.add("hidden");
+}
+
+function setFavoritedRecipes() {
+  for (var side of loggedIn.favDishes.sides) {
+    sides.innerText += `${side}, `
+  }
+  for (var main of loggedIn.favDishes.mains) {
+    mains.innerText += `${main}, `
+  }
+  for (var dessert of loggedIn.favDishes.desserts) {
+    desserts.innerText += `${dessert}, `
+  }
+  for (var fulls of loggedIn.favDishes.full) {
+    full.innerText += `${fulls}, `
+  }
+}
 
 function dinnerSelection() {
   var selectedValue;
@@ -152,7 +152,6 @@ function dinnerSelection() {
     alert("Please choose a dinner option.")
   }
 }
-
 
 function clear() {
   recipeSection.innerHTML = "";

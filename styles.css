@@ -14,6 +14,9 @@ red - #ee5253
 
 html {
   font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 100%;
+    min-width: 460px;
 }
 
 body {
@@ -111,12 +114,12 @@ h1 {
   font-weight: 900;
 }
 
-h4 {
+/* h4 {
   text-align: center;
   font-style: italic;
   padding: 0 10px;
   margin-top: 15vh;
-}
+} */
 
 .cook-button {
   background-color: #0fb9b1;
@@ -273,4 +276,49 @@ label {
 .login-button:focus,
 .signup-button:focus {
   background-color: white;
+}
+
+.saved-recipes-section {
+  background-color: rgba(225, 225, 225, .9);
+  width: 80vw;
+  margin-top: 5vh;
+  height: auto;
+}
+
+.saved {
+  margin-left: 1vw;
+}
+
+h4.saved {
+  text-transform: uppercase;
+  margin: 0 2vw;
+}
+
+.should-make-txt {
+  text-align: center;
+  font-style: italic;
+  padding: 0 10px;
+  margin-top: 15vh;
+}
+
+p.saved {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.go-back-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.go-back {
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #0fb9b1;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 3vw;
+  margin-bottom: 3vh;
+  width: 100px;
 }
