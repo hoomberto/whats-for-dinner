@@ -25,6 +25,10 @@ body {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .cookpot-image {
   position: relative;
   max-width: 140px;
@@ -47,7 +51,8 @@ main {
   justify-content: space-around;
 }
 
-section {
+.recipe-box,
+.dishes-box {
   position: relative;
   margin-top: 6vh;
   margin-bottom: 1vh;
@@ -56,7 +61,14 @@ section {
   background-color: rgba(225, 225, 225, .9);
 }
 
-#dishes {
+/* #dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+.dishes-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +81,7 @@ section {
         align-items: center;
     }
 
-    #dishes {
+    .dishes-box {
       margin-top: 2vh;
       margin-bottom: 6vh;
     }
@@ -135,21 +147,40 @@ h4 {
   padding: 8px;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .button-container {
-  display: flex;
-  position: relative;
+  display: inline-flex;
+  justify-content: flex-end;
   height: 4vh;
   width: 400px;
-  justify-content: flex-end;
   margin-top: 3vh;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  background: none;
+  margin-right: 5%;
+  cursor: pointer; /* Mouse pointer on hover */
+  border: 0;
+  outline: 0;
+  margin-right: 240px;
+  margin-top: -20px;
+  transition: all .2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.heart {
+  width: 20px;
+}
+
+
+
 .clear-button {
-  position: absolute;
   padding: 10px;
   color: white;
   background-color: #95a5a6;
@@ -177,4 +208,69 @@ h4 {
 
 ul > input {
   margin-bottom: 5%;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error1 {
+  font-size: 12px;
+  margin-top: -5%;
+  color: red;
+  text-align: left;
+  padding: 0;
+}
+
+.splash-text {
+  margin: 20px 0;
+  padding: 0;
+
+}
+
+label {
+  text-align: center;
+  /* text-transform: uppercase; */
+  font-size: 14px;
+}
+
+.user-field,
+.pass-field {
+  margin-bottom: 1vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  min-width: 200px;
+  height: 360px;
+  margin-top: 5vh;
+  background-color: rgba(225, 225, 225, .9);
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.login-button,
+.signup-button,
+.reset-button {
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: #0fb9b1;
+  border: 0;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: -1vh;
+  outline: 0;
+}
+
+.login-button:hover,
+.signup-button:hover,
+.login-button:focus,
+.signup-button:focus {
+  background-color: white;
 }
