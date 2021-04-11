@@ -3,6 +3,7 @@ var btn = document.querySelector(".cook-button");
 var recipeSection = document.querySelector("#dishes");
 var clearBtnContainer = document.querySelector(".button-container")
 var potImg = document.querySelector(".cookpot-image")
+var radioButtonSelection = document.querySelectorAll('input[name="choice"]');
 //Event Listeners
 btn.addEventListener("click", dinnerSelection);
 //Functions
@@ -35,10 +36,11 @@ function getRandomDish(rbv) {
     `
   }
   recipeSection.innerHTML += `<div class="button-container"><button class="clear-button">Clear</button></div>`
+  clearBtn = document.querySelector(".clear-button");
+  clearBtn.addEventListener("click", clear);
 }
 
 function dinnerSelection() {
-  var radioButtonSelection = document.querySelectorAll('input[name="choice"]');
   var selectedValue;
   for (var radioButton of radioButtonSelection) {
     if (radioButton.checked) {
@@ -51,5 +53,16 @@ function dinnerSelection() {
   }
   else {
     alert("Please choose a dinner option.")
+  }
+}
+
+function clear() {
+  recipeSection.innerHTML = "";
+  recipeSection.innerHTML += `<img class="cookpot-image" src="assets/cookpot.svg" alt="cookpot icon">`;
+  for (var rb of radioButtonSelection) {
+    if (rb.checked) {
+      rb.checked = false;
+      return;
+    }
   }
 }
