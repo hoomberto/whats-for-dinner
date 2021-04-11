@@ -4,9 +4,19 @@ var recipeSection = document.querySelector("#dishes");
 var clearBtnContainer = document.querySelector(".button-container")
 var potImg = document.querySelector(".cookpot-image")
 var radioButtonSelection = document.querySelectorAll('input[name="choice"]');
+var savedRecipesSection = document.querySelector(".saved-recipes-section");
+var sides = document.querySelector(".saved-sides");
+var mains = document.querySelector(".saved-mains");
+var desserts = document.querySelector(".saved-desserts");
+var full = document.querySelector(".saved-full");
+var goBackBtn = document.querySelector(".go-back");
+var savedBtn = document.querySelector(".recipe-button");
+let savedDishes = [sides, mains, desserts, full];
 
 //Event Listeners
 btn.addEventListener("click", dinnerSelection);
+savedBtn.addEventListener("click", showSavedRecipes);
+goBackBtn.addEventListener("click", backFromSaved);
 
 // GLOBAL Variable
 var loggedIn;
@@ -72,14 +82,22 @@ function addFavDish() {
   var recipe = document.querySelector(".recipe-text");
   userDishes = Object.entries(loggedIn.favDishes);
   var selectedValue;
+  var saved;
   var recipeText = recipe.innerText;
-    for (var rb of radioButtonSelection) {
-      if (rb.checked) {
-        selectedValue = rb.value;
+  for (var rb of radioButtonSelection) {
+    if (rb.checked) {
+      selectedValue = rb.value;
+    }
+  }
+  for (var savedDish of savedDishes) {
+    if (selectedValue == savedDish.id) {
+        saved = savedDish;
       }
+    }
     for (let [type, dishes] of userDishes) {
       if (selectedValue === type) {
         if (!dishes.includes(recipeText)) {
+          saved.innerText += `${recipeText}`;
           dishes.push(recipeText);
           updateUserBase();
           return
@@ -87,9 +105,13 @@ function addFavDish() {
       }
     }
   }
-}
 
-
+  function showSavedRecipes() {
+    recipeSelectionBox.classList.add("hidden");
+    dishesBox.classList.add("hidden");
+    dishesBox.classList.remove("dishes-box");
+    savedRecipesSection.classList.remove("hidden");
+  }
 
 
 function dinnerSelection() {
