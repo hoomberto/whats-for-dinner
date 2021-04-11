@@ -12,12 +12,6 @@ var navbar = document.querySelector("nav");
 var recipeSelectionBox = document.querySelector("#selectionBox");
 var dishesBox = document.getElementById("dishes");
 
-//
-
-// Global Variables
-// var userList = [];
-//
-
 class User {
   constructor(username, password) {
     this.username = username;
@@ -31,10 +25,11 @@ class User {
   }
 }
 
-// EVENT HANDLER
-
+// EVENT Listeners
 signupBtn.addEventListener("click", signUp);
 loginBtn.addEventListener("click", logIn);
+
+//FUNCTIONS
 
 function resetLocalStorage() {
   var resetList = [];
