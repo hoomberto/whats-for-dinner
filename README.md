@@ -1,23 +1,43 @@
-# What's for Dinner?
+<h1 align="center">What's for Dinner?</h1>
 
-## Overview
+Turing 2103 FE Week 3 Solo Challenge
+## Table of Contents
+* [Introduction](#introduction)
+* [Links](#Links)
+* [Features](#Features)
+* [Future Additions](#Future-Additions)
+* [Languages](#Languages)
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+## Introduction
+This is an interactive website that utilizes localStorage so that a user can create an account, login with account, view random dishes based on a selection, favorite the randomly displayed dish, and view the favorited dishes. Users will have their favorite dishes stored to localStorage and retrieved upon login.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+## Links  
+- To view the project in action, [click here!](https://hoomberto.github.io/whats-for-dinner/)
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+## Features
 
-## Learning Goals
+Login system - New users can sign up to create an account that requires a matching username and password to log in. Login form has light validation implemented.
+![alt text](https://media.giphy.com/media/nees5J2ylue53ye3FC/giphy.gif "Login System")
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+Users can see random dish displayed based on a selection they choose
+![alt text](https://media.giphy.com/media/Y0WFOO24SKK3Dpa3x7/giphy.gif "Display random dishes")
 
-## Setup
+Users can favorite a random dish that updates the localStorage userbase with the loggedin user's running list of favorited dishes
+![alt text](https://media.giphy.com/media/oX5GWWIMLzp0ZAfZcZ/giphy.gif "Favorite a random dish")
 
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+Users can see their favorite recipes immediately after favoriting them   
+![alt text](https://media.giphy.com/media/v6JzjVWzzb0Mm8Wdc6/giphy.gif "View saved recipes")
+
+Site will remember a user's favorite recipes upon leaving site and logging back in.  
+![alt text](https://media.giphy.com/media/NKCerQbl9ic2gyq4di/giphy.gif "localStorage demonstration")
+
+### Future Additions
+- Get CSS to be even more dynamic when resized for smaller screens
+- Create "Add recipe" button that lets users add their own recipes
+- Refactoring lots of code
+
+
+## Languages
+JavaScript  
+CSS  
+HTML   
