@@ -22,7 +22,7 @@ Login system - New users can sign up to create an account that requires a matchi
 Users can see random dish displayed based on a selection they choose
 ![alt text](https://media.giphy.com/media/Y0WFOO24SKK3Dpa3x7/giphy.gif "Display random dishes")
 
-Users can favorite a random dish that updates the localStorage userbase with the loggedin user's running list of favorited dishes
+Users can favorite a random dish that updates the localStorage userbase with the loggedin user's favorited dishes
 ![alt text](https://media.giphy.com/media/oX5GWWIMLzp0ZAfZcZ/giphy.gif "Favorite a random dish")
 
 Users can see their favorite recipes immediately after favoriting them   
