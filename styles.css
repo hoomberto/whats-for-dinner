@@ -56,7 +56,18 @@ section {
   background-color: rgba(225, 225, 225, .9);
 }
 
-#dishes {
+.hidden {
+  display: none;
+}
+
+/* #dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+.dishes-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +80,7 @@ section {
         align-items: center;
     }
 
-    #dishes {
+    .dishes-box {
       margin-top: 2vh;
       margin-bottom: 6vh;
     }
@@ -133,10 +144,6 @@ h4 {
   border: 0;
   border-radius: 3px;
   padding: 8px;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 .button-container {

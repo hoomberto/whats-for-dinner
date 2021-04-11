@@ -4,12 +4,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav>
+    <nav class="hidden">
       <h2 class="nav-header">What's for Dinner?</h2>
       <button class="recipe-button">Add a Recipe</button>
     </nav>
     <main>
-      <section id="selectionBox" class="recipe-box">
+      <section class="login-container">
+        <section class="login-form">
+          <h1>What's for Dinner?</h1>
+          <form>
+            <h4 class="error1 hidden">Please use a different <br>username.</h4>
+            <label for="username">Username:</label><br>
+            <input class="user-field" type="text" name="login"><br>
+            <label for="password">Password:</label><br>
+            <input class="pass-field" type="password" name="login"><br><br>
+            <input class="login-button" type="submit" value="Log In">
+            <input class="signup-button" type="submit" value="Sign Up">
+          </form>
+        </section>
+      </section>
+      <section id="selectionBox" class="recipe-box hidden">
         <h3 required="required">What are you looking for?</h3>
         <ul>
           <input type="radio" id="side" name="choice" value="sides">
@@ -23,7 +37,7 @@
         </ul>
         <button class="cook-button">Let's Cook!</button>
       </section>
-      <section id="dishes" class="recipe-box">
+      <section id="dishes" class="hidden recipe-box">
           <img class="cookpot-image" src="assets/cookpot.svg" alt="cookpot icon">
           <button class="clear-button hidden">Clear</button>
       </section>
