@@ -58,7 +58,15 @@ function getRandomDish(rbv) {
 //   }
 // }
 
-
+function updateUserBase() {
+  deserializedUserBase = JSON.parse(localStorage.getItem("userBase"));
+  for (var user of deserializedUserBase) {
+    if (loggedIn.username === user.username) {
+      user.favDishes = loggedIn.favDishes;
+      localStorage.setItem("userBase", JSON.stringify(deserializedUserBase));
+    }
+  }
+}
 
 function addFavDish() {
   var recipe = document.querySelector(".recipe-text");
@@ -73,7 +81,7 @@ function addFavDish() {
       if (selectedValue === type) {
         if (!dishes.includes(recipeText)) {
           dishes.push(recipeText);
-          // updateUserBase();
+          updateUserBase();
           return
         }
       }
