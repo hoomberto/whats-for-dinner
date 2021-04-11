@@ -79,7 +79,6 @@ function logIn(event) {
   for (var user of deserializedUserBase) {
     if (user.username === userField.value && user.password === passField.value) {
       alert(`Welcome, ${user.username}!`);
-      user.loginCount++;
       loggedIn = user;
       loginContainer.classList.add("hidden");
       loginContainer.classList.remove("login-container");
