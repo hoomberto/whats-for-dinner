@@ -106,6 +106,29 @@ function addFavDish() {
     }
   }
 
+  function setFavoritedRecipes() {
+  for (var side of loggedIn.favDishes.sides) {
+    sides.innerText += `
+    ${side}
+    `
+  }
+  for (var main of loggedIn.favDishes.mains) {
+    mains.innerText += `
+    ${main}
+    `
+  }
+  for (var dessert of loggedIn.favDishes.desserts) {
+    desserts.innerText += `
+    ${dessert}
+    `
+  }
+  for (var fulls of loggedIn.favDishes.full) {
+    full.innerText += `
+    ${fulls}
+    `
+  }
+}
+
   function showSavedRecipes() {
     recipeSelectionBox.classList.add("hidden");
     dishesBox.classList.add("hidden");
@@ -129,6 +152,7 @@ function dinnerSelection() {
     alert("Please choose a dinner option.")
   }
 }
+
 
 function clear() {
   recipeSection.innerHTML = "";
