@@ -24,8 +24,8 @@ class User {
     this.password = password;
     this.favDishes = {
       sides: [],
-      main: [],
-      dessert: [],
+      mains: [],
+      desserts: [],
       full: [],
     }
   }
