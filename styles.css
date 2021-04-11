@@ -58,15 +58,15 @@ main {
 }
 
 @media screen and (max-width: 840px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .dishes-box {
-      margin-top: 2vh;
-      margin-bottom: 6vh;
-    }
+  .dishes-box {
+    margin-top: 2vh;
+    margin-bottom: 6vh;
+  }
 }
 
 section h3 {
@@ -144,7 +144,7 @@ button {
   width: 40px;
   background: none;
   margin-right: 5%;
-  cursor: pointer; /* Mouse pointer on hover */
+  cursor: pointer;
   border: 0;
   outline: 0;
   margin-right: 240px;
@@ -183,9 +183,9 @@ button {
 }
 
 @media screen and (max-width: 769px) {
-    .clear-button {
-      margin-right: 5vw;
-    }
+  .clear-button {
+    margin-right: 5vw;
+  }
 }
 
 .clear-button:hover {
