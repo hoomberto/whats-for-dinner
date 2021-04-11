@@ -27,7 +27,6 @@ function randomIndex(array) {
 }
 
 function getRandomDish(rbv) {
-  // var dinnerType = rbv;
   recipeSection.innerHTML = "";
   recipeSection.innerHTML += `<h4 class="should-make-txt">You should make</h4>`;
   recipeSection.innerHTML += `<br>`;
@@ -56,6 +55,22 @@ function getRandomDish(rbv) {
   var heartBtn = document.querySelector(".btn");
   clearBtn.addEventListener("click", clearRecipeBox);
   heartBtn.addEventListener("click", addFavDish);
+}
+
+function showRandomDinner() {
+  var selectedValue;
+  for (var radioButton of radioButtonSelection) {
+    if (radioButton.checked) {
+      selectedValue = radioButton.value;
+      break;
+    }
+  }
+  if (selectedValue) {
+    getRandomDish(selectedValue);
+  }
+  else {
+    alert("Please choose a dinner option.")
+  }
 }
 
 function updateUserBase() {
@@ -124,22 +139,6 @@ function setFavoritedRecipes() {
   }
   for (var fulls of loggedIn.favDishes.full) {
     full.innerText += `${fulls} `;
-  }
-}
-
-function showRandomDinner() {
-  var selectedValue;
-  for (var radioButton of radioButtonSelection) {
-    if (radioButton.checked) {
-      selectedValue = radioButton.value;
-      break;
-    }
-  }
-  if (selectedValue) {
-    getRandomDish(selectedValue);
-  }
-  else {
-    alert("Please choose a dinner option.")
   }
 }
 
