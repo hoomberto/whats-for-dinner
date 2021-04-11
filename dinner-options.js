@@ -1,4 +1,4 @@
-var sides = [
+var sideDishes = [
 "Miso Glazed Carrots",
 "Coleslaw",
 "Garden Salad",
@@ -11,7 +11,7 @@ var sides = [
 "Hush Puppies",
 ]
 
-var mains = [
+var mainDishes = [
 "Spaghetti and Meatballs",
 "Pineapple Chicken",
 "Shakshuka",
@@ -27,7 +27,7 @@ var mains = [
 "Margarita Pizza",
 ]
 
-var desserts = [
+var dessertDishes = [
 "Apple Pie",
 "Lemon Meringue Pie",
 "Black Forest Cake",
