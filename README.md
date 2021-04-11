@@ -16,7 +16,7 @@ This is an interactive website that utilizes localStorage so that a user can cre
 
 ## Features
 
-Login system - New users can sign up to create an account that requires a matching username and password to log in. 
+New users can sign up to create an account that requires a matching username and password to log in. 
 ![alt text](https://media.giphy.com/media/nees5J2ylue53ye3FC/giphy.gif "Login System")
 
 Users can see random dish displayed based on a selection they choose
