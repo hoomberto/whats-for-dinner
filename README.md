@@ -34,6 +34,7 @@ Site will remember a user's favorite recipes upon leaving site and logging back 
 
 ### Future Additions
 - Get CSS to be even more dynamic when resized for smaller screens
+- Add more CSS in general to make everything look more clean
 - Create "Add recipe" button that lets users add their own recipes
 - Refactoring lots of code
 - Create functionality to delete a saved recipe by double clicking it
