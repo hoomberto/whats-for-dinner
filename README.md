@@ -22,7 +22,8 @@ New users can sign up to create an account that requires a matching username and
 Users can see random dish displayed based on a selection they choose
 ![alt text](https://media.giphy.com/media/Y0WFOO24SKK3Dpa3x7/giphy.gif "Display random dishes")
 
-Users can favorite a random dish that updates the localStorage userbase with the loggedin user's favorited dishes
+Users can favorite a random dish that updates the localStorage userbase with the loggedin user's favorited dishes<br>
+A user will not favorite a random dish that they have already favorited. 
 ![alt text](https://media.giphy.com/media/oX5GWWIMLzp0ZAfZcZ/giphy.gif "Favorite a random dish")
 
 Users can see their favorite recipes immediately after favoriting them   
@@ -35,6 +36,7 @@ Site will remember a user's favorite recipes upon leaving site and logging back 
 - Get CSS to be even more dynamic when resized for smaller screens
 - Create "Add recipe" button that lets users add their own recipes
 - Refactoring lots of code
+- Create functionality to delete a saved recipe by double clicking it
 
 
 ## Languages
