@@ -24,7 +24,7 @@ class User {
 // EVENT HANDLER
 
 signupBtn.addEventListener("click", signUp);
-// loginBtn.addEventListener("click", logIn);
+loginBtn.addEventListener("click", logIn);
 
 function resetLocalStorage() {
   var resetList = [];
@@ -59,4 +59,22 @@ function signUp(event) {
   }
 alert("Please fill sign up form completely.")
 return;
+}
+
+function logIn(event) {
+  event.preventDefault();
+  deserializedUserBase = JSON.parse(localStorage.getItem("userBase"));
+  for (var user of deserializedUserBase) {
+    if (user.username === userField.value && user.password === passField.value) {
+      alert(`Welcome, ${user.username}!`);
+      console.log("works so far");
+      loginContainer.classList.add("hidden");
+      loginContainer.classList.remove("login-container");
+      loginForm.classList.add("hidden");
+      return
+    }
+  }
+  alert("Failed to login! Please enter a valid username and password.");
+  resetForm();
+  return
 }

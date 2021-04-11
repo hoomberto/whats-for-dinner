@@ -25,6 +25,10 @@ body {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .cookpot-image {
   position: relative;
   max-width: 140px;
@@ -57,9 +61,7 @@ main {
   background-color: rgba(225, 225, 225, .9);
 }
 
-.hidden {
-  display: none;
-}
+
 
 /* #dishes {
   display: flex;
