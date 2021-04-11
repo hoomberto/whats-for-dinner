@@ -1,5 +1,5 @@
 // DOM Elements
-var btn = document.querySelector(".cook-button");
+var cookBtn = document.querySelector(".cook-button");
 var recipeSection = document.querySelector("#dishes");
 var clearBtnContainer = document.querySelector(".button-container")
 var potImg = document.querySelector(".cookpot-image")
@@ -14,7 +14,7 @@ var savedBtn = document.querySelector(".recipe-button");
 let savedDishes = [sides, mains, desserts, full];
 
 //Event Listeners
-btn.addEventListener("click", showRandomDinner);
+cookBtn.addEventListener("click", showRandomDinner);
 savedBtn.addEventListener("click", showSavedRecipes);
 goBackBtn.addEventListener("click", goBackFromSaved);
 
