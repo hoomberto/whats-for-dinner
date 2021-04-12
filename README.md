@@ -41,6 +41,7 @@ Site will remember a user's favorite recipes upon leaving site and logging back 
 - Refactoring lots of code
 - Create functionality to delete a saved recipe by double clicking it
 - Further inspect bug where github deploys a previous version of the project, causing a user's favDishes.mains property to show up as "favDishes.main". This in turn screws up how it's called and stops the saved recipes functionality from working correctly. 
+- Create mobile interface that has live-image recognition capability to scan recognizable food inventories (pantry, fridge, freezer, cupboard) and add them to appropriate site array. 
 
 
 ## Languages
